@@ -1,0 +1,37 @@
+codegen-agent/
+│
+├── app/
+│   ├── __init__.py
+│   ├── main.py                # Entry point
+│   │
+│   ├── agent/
+│   │   ├── planner.py         # Task planning
+│   │   ├── executor.py        # Code execution & validation
+│   │   ├── fixer.py           # Error-driven self-fix
+│   │   └── agent.py           # Orchestration
+│   │
+│   ├── llm/
+│   │   ├── base.py            # Abstract LLM interface
+│   │   ├── local_llm.py       # llama.cpp / Ollama wrapper
+│   │
+│   ├── rag/
+│   │   ├── indexer.py         # Codebase indexing
+│   │   ├── retriever.py       # Context retrieval
+│   │
+│   ├── prompts/
+│   │   ├── planner.txt
+│   │   ├── coder.txt
+│   │   └── fixer.txt
+│   │
+│   ├── utils/
+│   │   ├── files.py
+│   │   └── logger.py
+│
+├── data/
+│   └── vector_store/          # FAISS index
+│
+├── config/
+│   └── settings.yaml
+│
+├── requirements.txt
+└── README.md
